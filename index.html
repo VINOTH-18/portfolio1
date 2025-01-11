@@ -10,23 +10,103 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+                <img src="images/logo.png" class="logo" alt="Logo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
+            
             <div class="header-text">
                 <h1>Hii , I'm <span>Vinoth</span></h1>
                 <h3>Software Developer</h3>
             </div>
         </div>
-
     </div>
-    <!-- -about- -->
+
+    <!-- Projects Section -->
+    <div id="Projects">
+        <div class="container">
+            <h1 class="subtitles">My Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="images/gender.png" alt="Gender Classification Icon" class="project-icon">
+                    <h2 class="project-title">Gender Classification</h2>
+                    <div class="project-description">
+                        <p><strong>Objective:</strong> Build a machine learning model to classify gender based on facial features or voice data.</p>
+                        <p><strong>Dataset:</strong> Use labeled datasets like the CelebA dataset (images) or VoxCeleb (audio).</p>
+                        <p><strong>Approach:</strong> Preprocess data, extract features, and train models like SVM, CNN, or deep learning techniques for high accuracy.</p>
+                    </div>
+                    <a href="https://link.springer.com/">Learn more</a>
+                </div>
+
+                <div class="project">
+                    <img src="images/brain.png" alt="Alzheimer's Disease Prediction" class="project-icon">
+                    <h2>Alzheimer's Disease Prediction</h2>
+                    <p><strong>Objective:</strong> Develop a machine learning model to predict Alzheimer's disease from MRI scans or clinical data.</p>
+                    <p><strong>Dataset:</strong> Use datasets like ADNI (Alzheimer's Disease Neuroimaging Initiative) or Kaggle's Alzheimer's datasets.</p>
+                    <p><strong>Approach:</strong> Preprocess images, extract features using CNNs, and classify stages (MCI, AD, etc.) for early detection.</p>
+                    <a href="https://pmc.ncbi.nlm.nih.gov/">Learn more</a>
+                </div>
+
+                <div class="project">
+                    <img src="images/vehicle.png" alt="Vehicle Theft Detection" class="project-icon">
+                    <h2>Vehicle Theft Detection</h2>
+                    <p><strong>Objective:</strong> Detect and predict vehicle theft using anomaly detection techniques and real-time data analysis.</p>
+                    <p><strong>Dataset:</strong> Use datasets from public crime statistics or vehicle telematics data (GPS, speed, etc.).</p>
+                    <p><strong>Approach:</strong> Train models using decision trees or neural networks to identify patterns in theft-prone scenarios or unusual vehicle behavior.</p>
+                    <a href="https://nevonprojects.com/">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+<div id="Experience">
+    <div class="container">
+        <h1 class="subtitles">My Experience</h1>
+        <div class="experience-item">
+            <div class="experience-details">
+                <h2>PowerPoint Designer Intern</h2>
+                <p><strong>Company:</strong> Idea Dazzle Solution</p>
+                <p><strong>Duration:</strong> 3 months</p>
+                <p><strong>Description:</strong> Designed visually appealing PowerPoint presentations for business clients, ensuring alignment with branding and content guidelines.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="Contact">
+    <div class="container">
+        <h1 class="subtitles">Contact Me</h1>
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- About Section -->
     <div id="About">
         <div class="container">
             <div class="row">
@@ -38,21 +118,16 @@
                     <p>Hello! I'm Vinoth, a passionate Software Developer. I love coding and building impactful projects.</p>
                     <h3 class="connect-heading">Connect with Me</h3>
                     <ul class="social-links">
-                        <!-- Contact Number -->
                         <li>📞 <a href="tel:+8838450577">+8838450577</a></li>
-                        <!-- Email -->
                         <li>📧 <a href="https://mail.google.com/" target="_blank">Email Me</a></li>
-                        <!-- LinkedIn -->
                         <li>🔗 <a href="https://www.linkedin.com/in/vinoth-samidurai/" target="_blank">LinkedIn</a></li>
-                        <!-- GitHub -->
                         <li>💻 <a href="https://github.com/VINOTH-18" target="_blank">GitHub</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
+
+    <script src="script.js"></script>
 </body>
 </html>

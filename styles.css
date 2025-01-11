@@ -1,58 +1,71 @@
-*{
-    margin : 0;
+* {
+    margin: 0;
     padding: 0;
-    font-family: 'Poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     background-color: black;
     color: #fff;
 }
-#header{
+
+#header {
     width: 100%;
     height: 100vh;
     background-image: url(images/background.jpg);
     background-size: cover;
     background-position: center;
 }
+
 .logo {
     width: 100px; /* Adjust the width */
     height: auto; /* Maintain aspect ratio */
 }
-.container{
-    padding: 10px ;
+
+.container {
+    padding: 10px;
 }
-    
-nav{
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.header-text{
+
+.header-text {
     color: blueviolet;
     margin-top: 40px;
 }
-.header-text h1{
+
+.header-text h1 {
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text h1 span{
+
+.header-text h1 span {
     color: red;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
-nav ul li a{
+
+nav ul li a {
     color: hsl(238, 89%, 43%);
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
-nav ul li a::after{
+
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -62,10 +75,165 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover::after {
     width: 100%;
 }
-/* ------about-- */
+
+/* Projects Section */
+#Projects {
+    padding: 30px 0;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project img {
+    width: 100px; /* Adjust the width to your desired size */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure it's treated as a block element */
+    margin: 0 auto 15px; /* Center the image and add spacing below it */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.project {
+    text-align: center; /* Center-align text and content within each project */
+    padding: 20px; /* Optional: Add some padding around each project */
+    border: 1px solid lightgoldenrodyellow; /* Optional: Add a border for clarity */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    background-color: lightgoldenrodyellow; /* Optional: Add a light background */
+    color: black; /* Set the text color to black */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Project */
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarges the box */
+    background-color: #f9f9f9; /* Lightens the background color */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Adds a shadow for depth */
+}
+
+/* Hover Effect for Image */
+.project img:hover {
+    transform: scale(1.1); /* Slightly enlarges the image */
+}
+
+.project a {
+    color: hsl(238, 89%, 43%);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Experience Section */
+#Experience {
+    padding: 60px 0;
+    background-color: #f8f9fa; /* Light background color */
+    color: #333; /* Dark text color */
+    text-align: center;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between icon and text */
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: white; /* Make it stand out */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+
+
+.experience-details {
+    text-align: left;
+}
+
+.experience-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.experience-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+/* Contact Section */
+#Contact {
+    padding: 60px 0;
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #282828;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #e1e1e1;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: hsl(238, 89%, 43%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #ff004f;
+}
+
+
+
+/* About Section */
 #About {
     padding: 80px 0;
     color: #ababab;
@@ -92,12 +260,14 @@ nav ul li a:hover::after{
     line-height: 1.6;
     margin-bottom: 20px;
 }
+
 .connect-heading {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
     color: white;
 }
+
 .social-links {
     list-style: none;
     padding: 0;
@@ -122,7 +292,3 @@ nav ul li a:hover::after{
 .social-links a:hover {
     color: #ff004f;
 }
-
-
-
-
