@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            alert(`Thank you, ${name}! Your message has been sent successfully.`);
+            alert(Thank you, ${name}! Your message has been sent successfully.);
             contactForm.reset(); // Reset the form
         });
     }
