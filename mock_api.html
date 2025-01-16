@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Mock API</title>
+</head>
+<body>
+  <h1>Users List</h1>
+  <div id="user-list"></div>
+
+  <script>
+    // Mock API URL
+    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
+    // Fetch data and display
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(users => {
+        const userList = document.getElementById('user-list');
+        users.forEach(user => {
+          const userDiv = document.createElement('div');
+          userDiv.innerHTML = `
+            <h3>${user.name}</h3>
+            <p>Email: ${user.email}</p>
+          `;
+          userList.appendChild(userDiv);
+        });
+      })
+      .catch(error => console.error('Error:', error));
+  </script>
+</body>
+</html>
